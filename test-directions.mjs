@@ -1,6 +1,6 @@
 import https from 'https';
 
-const apiKey = "AIzaSyDk22Zvho_CyNaSw4hG2M6-kUYgNDcjVKY";
+const apiKey = process.env.GOOGLE_MAPS_API_KEY || "YOUR_API_KEY_HERE";
 const origin = "10.1518,76.3930"; // Cochin Airport
 const destination = "10.1518,76.3930"; // Cochin Airport
 const waypoints = [
