@@ -1,0 +1,36 @@
+{
+  "name": "voyage-india-site-audit",
+  "version": "1.0.0",
+  "description": "Comprehensive automated Site Audit Framework for Voyage India",
+  "type": "module",
+  "scripts": {
+    "audit:full":        "node scripts/orchestrator.js",
+    "audit:crawl":       "node scripts/01_crawler.js",
+    "audit:perf":        "node scripts/02_performance.js",
+    "audit:a11y":        "node scripts/03_accessibility.js",
+    "audit:security":    "node scripts/04_security.js",
+    "audit:seo":         "node scripts/05_seo.js",
+    "audit:code":        "node scripts/06_code_quality.js",
+    "audit:report":      "node scripts/07_reporter.js",
+    "audit:clean":       "node -e \"import('./scripts/utils/cleanup.js').then(m=>m.clean())\""
+  },
+  "dependencies": {
+    "playwright":        "^1.45.0",
+    "lighthouse":        "^12.0.0",
+    "axe-core":          "^4.9.1",
+    "@axe-core/playwright": "^4.9.1",
+    "chrome-launcher":   "^1.1.2",
+    "lighthouse":        "^12.0.0",
+    "node-fetch":        "^3.3.2",
+    "chalk":             "^5.3.0",
+    "ora":               "^8.0.1",
+    "cli-table3":        "^0.6.3",
+    "cheerio":           "^1.0.0",
+    "htmlhint":          "^1.1.4",
+    "link-check":        "^5.3.0",
+    "robots-parser":     "^3.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

@@ -1,0 +1,121 @@
+name: Site Audit – Voyage India
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  schedule:
+    # Runs every day at 02:00 UTC (07:30 IST)
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    inputs:
+      skip_perf:
+        description: 'Skip Lighthouse performance audit'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  site-audit:
+    name: Comprehensive Site Audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      # ── 1. Checkout ──────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Setup Node ─────────────────────────────────────────────────────
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      # ── 3. Install app dependencies ───────────────────────────────────────
+      - name: Install app dependencies
+        run: npm ci
+
+      # ── 4. Build the app ─────────────────────────────────────────────────
+      - name: Build Vite app
+        run: npm run build
+        env:
+          VITE_FIREBASE_API_KEY:        ${{ secrets.VITE_FIREBASE_API_KEY }}
+          VITE_FIREBASE_AUTH_DOMAIN:    ${{ secrets.VITE_FIREBASE_AUTH_DOMAIN }}
+          VITE_FIREBASE_PROJECT_ID:     ${{ secrets.VITE_FIREBASE_PROJECT_ID }}
+          VITE_FIREBASE_STORAGE_BUCKET: ${{ secrets.VITE_FIREBASE_STORAGE_BUCKET }}
+          VITE_FIREBASE_MESSAGING_ID:   ${{ secrets.VITE_FIREBASE_MESSAGING_ID }}
+          VITE_FIREBASE_APP_ID:         ${{ secrets.VITE_FIREBASE_APP_ID }}
+          VITE_GOOGLE_MAPS_KEY:         ${{ secrets.VITE_GOOGLE_MAPS_KEY }}
+
+      # ── 5. Start preview server ───────────────────────────────────────────
+      - name: Start Vite preview server
+        run: npx vite preview --port 5173 &
+        # Give server time to start
+      - name: Wait for server
+        run: npx wait-on http://localhost:5173 --timeout 30000
+
+      # ── 6. Install Playwright browsers ───────────────────────────────────
+      - name: Install Playwright + Chromium
+        working-directory: ./audit
+        run: |
+          npm ci
+          npx playwright install chromium --with-deps
+
+      # ── 7. Run the full audit ─────────────────────────────────────────────
+      - name: Run Site Audit
+        working-directory: ./audit
+        run: |
+          SKIP_FLAGS=""
+          if [ "${{ github.event.inputs.skip_perf }}" == "true" ]; then
+            SKIP_FLAGS="--skip-perf"
+          fi
+          node scripts/orchestrator.js $SKIP_FLAGS
+        env:
+          BASE_URL: 'http://localhost:5173'
+
+      # ── 8. Upload reports ─────────────────────────────────────────────────
+      - name: Upload audit reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: voyage-india-audit-report-${{ github.run_number }}
+          path: |
+            audit/reports/audit-report.html
+            audit/reports/audit-results.json
+          retention-days: 30
+
+      # ── 9. Post summary to PR ─────────────────────────────────────────────
+      - name: Parse and post audit summary
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const results = JSON.parse(fs.readFileSync('audit/reports/audit-results.json', 'utf8'));
+            const { health, crawl, performance, accessibility, security, seo } = results;
+            const emoji = health.score >= 85 ? '✅' : health.score >= 65 ? '⚠️' : '❌';
+            const body = [
+              `## ${emoji} Site Audit Results — Score: ${health.score}/100`,
+              '',
+              '| Metric | Value |',
+              '|--------|-------|',
+              `| 🕷️ Pages Crawled | ${crawl.pages.length} |`,
+              `| 💥 Broken Links | ${crawl.brokenLinks.length} |`,
+              `| 🖥️ Console Errors | ${crawl.consoleErrors.length} |`,
+              `| ⚡ Avg Performance | ${performance.summary?.averageScores?.performance ?? 'N/A'} |`,
+              `| ♿ A11y Violations | ${accessibility.pages.reduce((s,p)=>s+(p.violationCount||0),0)} |`,
+              `| 🔒 Missing Headers | ${security.headers?.missing?.length ?? '?'} |`,
+              `| 🔍 SEO Issues | ${seo.pages.reduce((s,p)=>s+(p.issues?.length||0),0)} |`,
+              '',
+              health.penalties.length ? `**Penalties:** ${health.penalties.join(' · ')}` : '✔ No scoring penalties',
+              '',
+              `Full HTML report attached as workflow artifact.`,
+            ].join('\n');
+            github.rest.issues.createComment({
+              ...context.repo,
+              issue_number: context.issue.number,
+              body,
+            });

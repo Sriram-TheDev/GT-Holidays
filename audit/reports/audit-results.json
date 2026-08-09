@@ -1,0 +1,1466 @@
+{
+  "health": {
+    "score": 85,
+    "penalties": [
+      "6 missing security headers (-15pts)"
+    ]
+  },
+  "meta": {
+    "appName": "Voyage India",
+    "auditedAt": "2026-08-08T20:01:36.808Z",
+    "baseUrl": "http://localhost:5173",
+    "duration": 0,
+    "pagesAudited": [
+      "http://localhost:5173/",
+      "http://localhost:5173/auth",
+      "http://localhost:5173/discover",
+      "http://localhost:5173/my-trips",
+      "http://localhost:5173/seed"
+    ]
+  },
+  "crawl": {
+    "pages": [
+      {
+        "url": "http://localhost:5173/",
+        "title": "Voyage India — Discover Land-Only International Holiday Packages",
+        "statusCode": 200,
+        "assetCount": 21,
+        "linkCount": 1,
+        "errorCount": 0
+      },
+      {
+        "url": "http://localhost:5173/auth",
+        "title": "Voyage India — Discover Land-Only International Holiday Packages",
+        "statusCode": 200,
+        "assetCount": 3,
+        "linkCount": 1,
+        "errorCount": 0
+      },
+      {
+        "url": "http://localhost:5173/discover",
+        "title": "Voyage India — Discover Land-Only International Holiday Packages",
+        "statusCode": 200,
+        "assetCount": 21,
+        "linkCount": 1,
+        "errorCount": 0
+      },
+      {
+        "url": "http://localhost:5173/my-trips",
+        "title": "Voyage India — Discover Land-Only International Holiday Packages",
+        "statusCode": 200,
+        "assetCount": 3,
+        "linkCount": 2,
+        "errorCount": 0
+      },
+      {
+        "url": "http://localhost:5173/seed",
+        "title": "Voyage India — Discover Land-Only International Holiday Packages",
+        "statusCode": 200,
+        "assetCount": 3,
+        "linkCount": 1,
+        "errorCount": 0
+      }
+    ],
+    "brokenLinks": [],
+    "missingAssets": [],
+    "consoleErrors": [],
+    "networkErrors": []
+  },
+  "performance": {
+    "routes": [],
+    "summary": {}
+  },
+  "accessibility": {
+    "pages": [
+      {
+        "url": "http://localhost:5173/",
+        "violationCount": 3,
+        "incomplete": 1,
+        "violations": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=playwright",
+            "nodeCount": 11,
+            "nodes": [
+              {
+                "html": "<p style=\"font-size: 0.72rem; letter-spacing: 0.08em; color: var(--color-text-muted); font-family: var(--font-display); font-weight: 600;\">4 FEATURED PACKAGES</p>",
+                "target": ".sidebar-panel > div:nth-child(1) > p",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.49 (foreground color: #545559, background color: #111318, font size: 8.6pt (11.52px), font weight: normal). Expected contrast r"
+              },
+              {
+                "html": "<p style=\"font-size: 0.73rem; color: rgba(255, 255, 255, 0.38); margin-bottom: 4px;\">5 Days / 4 Nights</p>",
+                "target": "div:nth-child(3) > p:nth-child(2)",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.42 (foreground color: #787a7d, background color: #26282d, font size: 8.8pt (11.68px), font weight: normal). Expected contrast r"
+              },
+              {
+                "html": "<span style=\"font-size: 0.68rem; color: rgba(255, 255, 255, 0.3);\">/ adult</span>",
+                "target": "button[aria-label=\"View Kerala Backwaters\"] > div:nth-child(3) > div > span:nth-child(2)",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.67 (foreground color: #67696c, background color: #26282d, font size: 8.2pt (10.88px), font weight: normal). Expected contrast r"
+              }
+            ]
+          },
+          {
+            "id": "link-name",
+            "impact": "serious",
+            "description": "Ensure links have discernible text",
+            "help": "Links must have discernible text",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/link-name?application=playwright",
+            "nodeCount": 5,
+            "nodes": [
+              {
+                "html": "<a href=\"#\" style=\"color: rgba(255, 255, 255, 0.5); transition: color 0.2s; display: flex; align-items: center; justify-content: center;\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"currentC",
+                "target": "a[href=\"#\"]:nth-child(1)",
+                "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute d"
+              },
+              {
+                "html": "<a href=\"#\" style=\"color: rgba(255, 255, 255, 0.5); transition: color 0.2s; display: flex; align-items: center; justify-content: center;\">",
+                "target": "a[href=\"#\"]:nth-child(2)",
+                "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute d"
+              },
+              {
+                "html": "<a href=\"#\" style=\"color: rgba(255, 255, 255, 0.5); transition: color 0.2s; display: flex; align-items: center; justify-content: center;\">",
+                "target": "a[href=\"#\"]:nth-child(3)",
+                "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute d"
+              }
+            ]
+          },
+          {
+            "id": "nested-interactive",
+            "impact": "serious",
+            "description": "Ensure interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
+            "help": "Interactive controls must not be nested",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/nested-interactive?application=playwright",
+            "nodeCount": 13,
+            "nodes": [
+              {
+                "html": "<article role=\"button\" tabindex=\"0\" aria-label=\"View Andaman Escape ...\" style=\"background: var(--co...\">",
+                "target": "article[aria-label=\"View Andaman Escape package\"]",
+                "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+              },
+              {
+                "html": "<article role=\"button\" tabindex=\"0\" aria-label=\"View Varanasi Spirit...\" style=\"background: var(--co...\">",
+                "target": ".pkg-grid-card:nth-child(2) > article",
+                "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+              },
+              {
+                "html": "<article role=\"button\" tabindex=\"0\" aria-label=\"View Meghalaya Cloud...\" style=\"background: var(--co...\">",
+                "target": "article[aria-label=\"View Meghalaya Clouds package\"]",
+                "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+              }
+            ]
+          }
+        ],
+        "byImpact": {
+          "critical": 0,
+          "serious": 3,
+          "moderate": 0,
+          "minor": 0
+        }
+      },
+      {
+        "url": "http://localhost:5173/auth",
+        "violationCount": 1,
+        "incomplete": 1,
+        "violations": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=playwright",
+            "nodeCount": 1,
+            "nodes": [
+              {
+                "html": "<button class=\"flex-1 pb-4 text-[15px] font-medium transition-colors text-white/30 hover:text-white/60\">Sign Up</button>",
+                "target": ".hover\\:text-white\\/60",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.67 (foreground color: #57595d, background color: #0f1218, font size: 11.3pt (15px), font weight: normal). Expected contrast rat"
+              }
+            ]
+          }
+        ],
+        "byImpact": {
+          "critical": 0,
+          "serious": 1,
+          "moderate": 0,
+          "minor": 0
+        }
+      },
+      {
+        "url": "http://localhost:5173/discover",
+        "violationCount": 3,
+        "incomplete": 1,
+        "violations": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=playwright",
+            "nodeCount": 11,
+            "nodes": [
+              {
+                "html": "<p style=\"font-size: 0.72rem; letter-spacing: 0.08em; color: var(--color-text-muted); font-family: var(--font-display); font-weight: 600;\">4 FEATURED PACKAGES</p>",
+                "target": ".sidebar-panel > div:nth-child(1) > p",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.49 (foreground color: #545559, background color: #111318, font size: 8.6pt (11.52px), font weight: normal). Expected contrast r"
+              },
+              {
+                "html": "<p style=\"font-size: 0.73rem; color: rgba(255, 255, 255, 0.38); margin-bottom: 4px;\">5 Days / 4 Nights</p>",
+                "target": "div:nth-child(3) > p:nth-child(2)",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.42 (foreground color: #787a7d, background color: #26282d, font size: 8.8pt (11.68px), font weight: normal). Expected contrast r"
+              },
+              {
+                "html": "<span style=\"font-size: 0.68rem; color: rgba(255, 255, 255, 0.3);\">/ adult</span>",
+                "target": "button[aria-label=\"View Kerala Backwaters\"] > div:nth-child(3) > div > span:nth-child(2)",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.67 (foreground color: #67696c, background color: #26282d, font size: 8.2pt (10.88px), font weight: normal). Expected contrast r"
+              }
+            ]
+          },
+          {
+            "id": "link-name",
+            "impact": "serious",
+            "description": "Ensure links have discernible text",
+            "help": "Links must have discernible text",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/link-name?application=playwright",
+            "nodeCount": 5,
+            "nodes": [
+              {
+                "html": "<a href=\"#\" style=\"color: rgba(255, 255, 255, 0.5); transition: color 0.2s; display: flex; align-items: center; justify-content: center;\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"currentC",
+                "target": "a[href=\"#\"]:nth-child(1)",
+                "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute d"
+              },
+              {
+                "html": "<a href=\"#\" style=\"color: rgba(255, 255, 255, 0.5); transition: color 0.2s; display: flex; align-items: center; justify-content: center;\">",
+                "target": "a[href=\"#\"]:nth-child(2)",
+                "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute d"
+              },
+              {
+                "html": "<a href=\"#\" style=\"color: rgba(255, 255, 255, 0.5); transition: color 0.2s; display: flex; align-items: center; justify-content: center;\">",
+                "target": "a[href=\"#\"]:nth-child(3)",
+                "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute d"
+              }
+            ]
+          },
+          {
+            "id": "nested-interactive",
+            "impact": "serious",
+            "description": "Ensure interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
+            "help": "Interactive controls must not be nested",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/nested-interactive?application=playwright",
+            "nodeCount": 13,
+            "nodes": [
+              {
+                "html": "<article role=\"button\" tabindex=\"0\" aria-label=\"View Andaman Escape ...\" style=\"background: var(--co...\">",
+                "target": "article[aria-label=\"View Andaman Escape package\"]",
+                "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+              },
+              {
+                "html": "<article role=\"button\" tabindex=\"0\" aria-label=\"View Varanasi Spirit...\" style=\"background: var(--co...\">",
+                "target": ".pkg-grid-card:nth-child(2) > article",
+                "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+              },
+              {
+                "html": "<article role=\"button\" tabindex=\"0\" aria-label=\"View Meghalaya Cloud...\" style=\"background: var(--co...\">",
+                "target": "article[aria-label=\"View Meghalaya Clouds package\"]",
+                "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+              }
+            ]
+          }
+        ],
+        "byImpact": {
+          "critical": 0,
+          "serious": 3,
+          "moderate": 0,
+          "minor": 0
+        }
+      },
+      {
+        "url": "http://localhost:5173/my-trips",
+        "violationCount": 0,
+        "incomplete": 1,
+        "violations": [],
+        "byImpact": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0
+        }
+      },
+      {
+        "url": "http://localhost:5173/seed",
+        "violationCount": 0,
+        "incomplete": 1,
+        "violations": [],
+        "byImpact": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0
+        }
+      }
+    ]
+  },
+  "security": {
+    "headers": {
+      "url": "http://localhost:5173",
+      "present": [],
+      "missing": [
+        "content-security-policy",
+        "strict-transport-security",
+        "x-frame-options",
+        "x-content-type-options",
+        "referrer-policy",
+        "permissions-policy"
+      ],
+      "rawHeaders": {
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "content-length": "1278",
+        "content-type": "text/html",
+        "date": "Sat, 08 Aug 2026 20:02:09 GMT",
+        "etag": "W/\"4fe-NiM0dzG1ilun9K5/nr33NalQQQA\"",
+        "keep-alive": "timeout=5",
+        "vary": "Origin"
+      }
+    },
+    "mixedContent": [],
+    "recommendations": [
+      {
+        "url": "http://localhost:5173",
+        "type": "style",
+        "src": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap",
+        "issue": "Missing Subresource Integrity (SRI)",
+        "category": "SRI"
+      },
+      {
+        "url": "http://localhost:5173/",
+        "type": "style",
+        "src": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap",
+        "issue": "Missing Subresource Integrity (SRI)",
+        "category": "SRI"
+      },
+      {
+        "url": "http://localhost:5173/auth",
+        "type": "style",
+        "src": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap",
+        "issue": "Missing Subresource Integrity (SRI)",
+        "category": "SRI"
+      },
+      {
+        "url": "http://localhost:5173/discover",
+        "type": "style",
+        "src": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap",
+        "issue": "Missing Subresource Integrity (SRI)",
+        "category": "SRI"
+      },
+      {
+        "url": "http://localhost:5173/my-trips",
+        "type": "style",
+        "src": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap",
+        "issue": "Missing Subresource Integrity (SRI)",
+        "category": "SRI"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/main.jsx?t=1786218259788",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6IkFB…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/@vite/client",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJz…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/node_modules/.vite/deps/react.js?v=78247c06",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJm…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/@react-refresh",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJz…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=78247c06",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJm…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/App.jsx?t=1786218259788",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6Ijs7…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/node_modules/vite/dist/client/env.mjs",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJz…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/node_modules/.vite/deps/rolldown-runtime-DC62tzP2.js?v=78247c06",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJz…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/context/AuthContext.jsx",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6IjtB…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/context/BookingContext.jsx",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6Ijs7…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/store/uiStore.jsx",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6Ijs7…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/components/EffectsProvider.jsx",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6IkFB…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/pages/AuthPage.jsx",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6IkFB…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/pages/DiscoverPage.jsx?t=1786218259788",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6Ijs7…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/pages/PackageDetailsPage.jsx?t=1786218259788",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6Ijs7…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/pages/Checkout.jsx",
+        "secretType": "Firebase API Key",
+        "snippet": "AIzaSyARgZLJseuCZNN-…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/pages/Checkout.jsx",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6IjtB…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/pages/Checkout.jsx",
+        "secretType": "Razorpay Key",
+        "snippet": "rzp_test_TKr7LWr52a5…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/pages/Checkout.jsx",
+        "secretType": "Google Maps Key",
+        "snippet": "AIzaSyARgZLJseuCZNN-…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/pages/Confirmation.jsx",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6IjtB…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/pages/MyTrips.jsx",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6IkFB…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=78247c06",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJm…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/pages/SeedPage.jsx",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6IkFB…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/components/layout/Header.jsx?t=1786218259788",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6Ijs7…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/components/PageTransition.jsx",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6IkFB…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/backend/config/firebase.js",
+        "secretType": "Firebase API Key",
+        "snippet": "AIzaSyARgZLJseuCZNN-…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/backend/config/firebase.js",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6IkFB…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/backend/config/firebase.js",
+        "secretType": "Razorpay Key",
+        "snippet": "rzp_test_TKr7LWr52a5…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/backend/config/firebase.js",
+        "secretType": "Google Maps Key",
+        "snippet": "AIzaSyARgZLJseuCZNN-…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/backend/services/pricingEngine.js",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6IkFB…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/node_modules/.vite/deps/gsap.js?v=78247c06",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJz…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/node_modules/.vite/deps/@gsap_react.js?v=78247c06",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJm…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/components/BlobCursor.jsx",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6IkFB…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=78247c06",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJm…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/components/ui/Aurora.jsx",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6Ijs7…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/components/discover/SidebarCard.jsx?t=1786218259788",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6Ijs7…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/components/discover/PackageGridCard.jsx?t=1786218259788",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6Ijs7…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/components/Footer.jsx",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6IkFB…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/components/ItineraryMap.jsx?t=1786217985205",
+        "secretType": "Firebase API Key",
+        "snippet": "AIzaSyARgZLJseuCZNN-…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/components/ItineraryMap.jsx?t=1786217985205",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6IkFB…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/components/ItineraryMap.jsx?t=1786217985205",
+        "secretType": "Razorpay Key",
+        "snippet": "rzp_test_TKr7LWr52a5…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/components/ItineraryMap.jsx?t=1786217985205",
+        "secretType": "Google Maps Key",
+        "snippet": "AIzaSyARgZLJseuCZNN-…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/data/packages.js?t=1786218259788",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6Ijs7…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/node_modules/.vite/deps/gsap_ScrollTrigger.js?v=78247c06",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJm…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/node_modules/.vite/deps/firebase_auth.js?v=78247c06",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJm…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/node_modules/.vite/deps/react-dom.js?v=78247c06",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJm…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/node_modules/.vite/deps/motion_react.js?v=78247c06",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJm…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/node_modules/.vite/deps/firebase_app.js?v=78247c06",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJm…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/node_modules/.vite/deps/firebase_functions.js?v=78247c06",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJm…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/backend/services/seederService.js",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6IkFB…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/src/hooks/useWishlist.js",
+        "secretType": "JWT Token",
+        "snippet": "eyJtYXBwaW5ncyI6IkFB…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/node_modules/.vite/deps/react_jsx-runtime.js?v=78247c06",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJm…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/node_modules/.vite/deps/index.esm-D2P2uZeS.js?v=78247c06",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJm…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/node_modules/.vite/deps/gsap-CZysqE3m.js?v=78247c06",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJm…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/node_modules/.vite/deps/@vis__gl_react-google-maps.js?v=78247c06",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJm…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/node_modules/.vite/deps/ogl.js?v=78247c06",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJm…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/node_modules/.vite/deps/firebase_firestore.js?v=78247c06",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJm…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "url": "http://localhost:5173",
+        "scriptSrc": "http://localhost:5173/node_modules/.vite/deps/lucide-react.js?v=78247c06",
+        "secretType": "JWT Token",
+        "snippet": "eyJ2ZXJzaW9uIjozLCJm…",
+        "category": "Exposed Secret",
+        "severity": "CRITICAL"
+      },
+      {
+        "category": "Headers",
+        "severity": "HIGH",
+        "message": "Add Content-Security-Policy header to restrict script/style origins"
+      },
+      {
+        "category": "Headers",
+        "severity": "HIGH",
+        "message": "Add Strict-Transport-Security (HSTS) header"
+      },
+      {
+        "category": "Headers",
+        "severity": "MEDIUM",
+        "message": "Add X-Frame-Options: DENY to prevent clickjacking"
+      },
+      {
+        "category": "Headers",
+        "severity": "LOW",
+        "message": "Add Referrer-Policy: strict-origin-when-cross-origin"
+      }
+    ]
+  },
+  "seo": {
+    "pages": [
+      {
+        "url": "http://localhost:5173/",
+        "title": "Voyage India — Discover Land-Only International Holiday Packages",
+        "description": "Browse, explore, and book transparent land-only international holiday packages for Indian travellers. Dynamic INR pricing, interactive itinerary maps, and secure Razorpay payments.",
+        "canonical": "",
+        "lang": "en",
+        "h1Count": 1,
+        "imgCount": 18,
+        "imgMissingAlt": 0,
+        "hasJsonLd": false,
+        "ogTitle": "",
+        "robots": {
+          "exists": true,
+          "status": 200,
+          "content": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <script type=\"module\">import { injectIntoGlobalHook } from \"/@react-refresh\";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;</script>\n\n    <script type=\"module\" src=\"/@vite/client\"></script>\n\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Voyage India — Discover Land-Only International Holiday Packages</title>\n    <meta name=\"description\" content=\"Browse, explore, and book transparent land-only international holiday packages for Indian travellers. Dynamic INR pricing, interactive itinerary maps, and secure Razorpay payments.\" />\n\n    <!-- Google Fonts -->\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />\n    <link href=\"https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap\" rel=\"stylesheet\" />\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script type=\"module\" src=\"/src/main.jsx?t=1786218259788\"></script>\n  </body>\n</html>\n",
+          "hasDisallow": false,
+          "hasSitemap": false
+        },
+        "sitemap": {
+          "exists": true,
+          "status": 200
+        },
+        "issues": [
+          {
+            "severity": "warn",
+            "field": "title",
+            "message": "Title too long (64 chars, max 60)"
+          },
+          {
+            "severity": "warn",
+            "field": "meta-description",
+            "message": "Description too long (180 chars)"
+          },
+          {
+            "severity": "warn",
+            "field": "canonical",
+            "message": "Missing canonical URL"
+          },
+          {
+            "severity": "info",
+            "field": "og:title",
+            "message": "Missing og:title"
+          },
+          {
+            "severity": "info",
+            "field": "og:description",
+            "message": "Missing og:description"
+          },
+          {
+            "severity": "info",
+            "field": "og:image",
+            "message": "Missing og:image"
+          },
+          {
+            "severity": "info",
+            "field": "twitter:card",
+            "message": "Missing twitter:card meta tag"
+          },
+          {
+            "severity": "info",
+            "field": "structured-data",
+            "message": "No JSON-LD structured data found"
+          }
+        ]
+      },
+      {
+        "url": "http://localhost:5173/auth",
+        "title": "Voyage India — Discover Land-Only International Holiday Packages",
+        "description": "Browse, explore, and book transparent land-only international holiday packages for Indian travellers. Dynamic INR pricing, interactive itinerary maps, and secure Razorpay payments.",
+        "canonical": "",
+        "lang": "en",
+        "h1Count": 1,
+        "imgCount": 0,
+        "imgMissingAlt": 0,
+        "hasJsonLd": false,
+        "ogTitle": "",
+        "robots": {
+          "exists": true,
+          "status": 200,
+          "content": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <script type=\"module\">import { injectIntoGlobalHook } from \"/@react-refresh\";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;</script>\n\n    <script type=\"module\" src=\"/@vite/client\"></script>\n\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Voyage India — Discover Land-Only International Holiday Packages</title>\n    <meta name=\"description\" content=\"Browse, explore, and book transparent land-only international holiday packages for Indian travellers. Dynamic INR pricing, interactive itinerary maps, and secure Razorpay payments.\" />\n\n    <!-- Google Fonts -->\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />\n    <link href=\"https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap\" rel=\"stylesheet\" />\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script type=\"module\" src=\"/src/main.jsx?t=1786218259788\"></script>\n  </body>\n</html>\n",
+          "hasDisallow": false,
+          "hasSitemap": false
+        },
+        "sitemap": {
+          "exists": true,
+          "status": 200
+        },
+        "issues": [
+          {
+            "severity": "warn",
+            "field": "title",
+            "message": "Title too long (64 chars, max 60)"
+          },
+          {
+            "severity": "warn",
+            "field": "meta-description",
+            "message": "Description too long (180 chars)"
+          },
+          {
+            "severity": "warn",
+            "field": "canonical",
+            "message": "Missing canonical URL"
+          },
+          {
+            "severity": "info",
+            "field": "og:title",
+            "message": "Missing og:title"
+          },
+          {
+            "severity": "info",
+            "field": "og:description",
+            "message": "Missing og:description"
+          },
+          {
+            "severity": "info",
+            "field": "og:image",
+            "message": "Missing og:image"
+          },
+          {
+            "severity": "info",
+            "field": "twitter:card",
+            "message": "Missing twitter:card meta tag"
+          },
+          {
+            "severity": "info",
+            "field": "structured-data",
+            "message": "No JSON-LD structured data found"
+          },
+          {
+            "severity": "warn",
+            "field": "title",
+            "message": "Duplicate title — also used on http://localhost:5173/"
+          }
+        ]
+      },
+      {
+        "url": "http://localhost:5173/discover",
+        "title": "Voyage India — Discover Land-Only International Holiday Packages",
+        "description": "Browse, explore, and book transparent land-only international holiday packages for Indian travellers. Dynamic INR pricing, interactive itinerary maps, and secure Razorpay payments.",
+        "canonical": "",
+        "lang": "en",
+        "h1Count": 1,
+        "imgCount": 18,
+        "imgMissingAlt": 0,
+        "hasJsonLd": false,
+        "ogTitle": "",
+        "robots": {
+          "exists": true,
+          "status": 200,
+          "content": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <script type=\"module\">import { injectIntoGlobalHook } from \"/@react-refresh\";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;</script>\n\n    <script type=\"module\" src=\"/@vite/client\"></script>\n\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Voyage India — Discover Land-Only International Holiday Packages</title>\n    <meta name=\"description\" content=\"Browse, explore, and book transparent land-only international holiday packages for Indian travellers. Dynamic INR pricing, interactive itinerary maps, and secure Razorpay payments.\" />\n\n    <!-- Google Fonts -->\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />\n    <link href=\"https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap\" rel=\"stylesheet\" />\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script type=\"module\" src=\"/src/main.jsx?t=1786218259788\"></script>\n  </body>\n</html>\n",
+          "hasDisallow": false,
+          "hasSitemap": false
+        },
+        "sitemap": {
+          "exists": true,
+          "status": 200
+        },
+        "issues": [
+          {
+            "severity": "warn",
+            "field": "title",
+            "message": "Title too long (64 chars, max 60)"
+          },
+          {
+            "severity": "warn",
+            "field": "meta-description",
+            "message": "Description too long (180 chars)"
+          },
+          {
+            "severity": "warn",
+            "field": "canonical",
+            "message": "Missing canonical URL"
+          },
+          {
+            "severity": "info",
+            "field": "og:title",
+            "message": "Missing og:title"
+          },
+          {
+            "severity": "info",
+            "field": "og:description",
+            "message": "Missing og:description"
+          },
+          {
+            "severity": "info",
+            "field": "og:image",
+            "message": "Missing og:image"
+          },
+          {
+            "severity": "info",
+            "field": "twitter:card",
+            "message": "Missing twitter:card meta tag"
+          },
+          {
+            "severity": "info",
+            "field": "structured-data",
+            "message": "No JSON-LD structured data found"
+          },
+          {
+            "severity": "warn",
+            "field": "title",
+            "message": "Duplicate title — also used on http://localhost:5173/"
+          }
+        ]
+      },
+      {
+        "url": "http://localhost:5173/my-trips",
+        "title": "Voyage India — Discover Land-Only International Holiday Packages",
+        "description": "Browse, explore, and book transparent land-only international holiday packages for Indian travellers. Dynamic INR pricing, interactive itinerary maps, and secure Razorpay payments.",
+        "canonical": "",
+        "lang": "en",
+        "h1Count": 0,
+        "imgCount": 0,
+        "imgMissingAlt": 0,
+        "hasJsonLd": false,
+        "ogTitle": "",
+        "robots": {
+          "exists": true,
+          "status": 200,
+          "content": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <script type=\"module\">import { injectIntoGlobalHook } from \"/@react-refresh\";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;</script>\n\n    <script type=\"module\" src=\"/@vite/client\"></script>\n\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Voyage India — Discover Land-Only International Holiday Packages</title>\n    <meta name=\"description\" content=\"Browse, explore, and book transparent land-only international holiday packages for Indian travellers. Dynamic INR pricing, interactive itinerary maps, and secure Razorpay payments.\" />\n\n    <!-- Google Fonts -->\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />\n    <link href=\"https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap\" rel=\"stylesheet\" />\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script type=\"module\" src=\"/src/main.jsx?t=1786218259788\"></script>\n  </body>\n</html>\n",
+          "hasDisallow": false,
+          "hasSitemap": false
+        },
+        "sitemap": {
+          "exists": true,
+          "status": 200
+        },
+        "issues": [
+          {
+            "severity": "warn",
+            "field": "title",
+            "message": "Title too long (64 chars, max 60)"
+          },
+          {
+            "severity": "warn",
+            "field": "meta-description",
+            "message": "Description too long (180 chars)"
+          },
+          {
+            "severity": "warn",
+            "field": "canonical",
+            "message": "Missing canonical URL"
+          },
+          {
+            "severity": "info",
+            "field": "og:title",
+            "message": "Missing og:title"
+          },
+          {
+            "severity": "info",
+            "field": "og:description",
+            "message": "Missing og:description"
+          },
+          {
+            "severity": "info",
+            "field": "og:image",
+            "message": "Missing og:image"
+          },
+          {
+            "severity": "info",
+            "field": "twitter:card",
+            "message": "Missing twitter:card meta tag"
+          },
+          {
+            "severity": "warn",
+            "field": "headings",
+            "message": "No <h1> found on page"
+          },
+          {
+            "severity": "info",
+            "field": "structured-data",
+            "message": "No JSON-LD structured data found"
+          },
+          {
+            "severity": "warn",
+            "field": "title",
+            "message": "Duplicate title — also used on http://localhost:5173/"
+          }
+        ]
+      },
+      {
+        "url": "http://localhost:5173/seed",
+        "title": "Voyage India — Discover Land-Only International Holiday Packages",
+        "description": "Browse, explore, and book transparent land-only international holiday packages for Indian travellers. Dynamic INR pricing, interactive itinerary maps, and secure Razorpay payments.",
+        "canonical": "",
+        "lang": "en",
+        "h1Count": 0,
+        "imgCount": 0,
+        "imgMissingAlt": 0,
+        "hasJsonLd": false,
+        "ogTitle": "",
+        "robots": {
+          "exists": true,
+          "status": 200,
+          "content": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <script type=\"module\">import { injectIntoGlobalHook } from \"/@react-refresh\";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;</script>\n\n    <script type=\"module\" src=\"/@vite/client\"></script>\n\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Voyage India — Discover Land-Only International Holiday Packages</title>\n    <meta name=\"description\" content=\"Browse, explore, and book transparent land-only international holiday packages for Indian travellers. Dynamic INR pricing, interactive itinerary maps, and secure Razorpay payments.\" />\n\n    <!-- Google Fonts -->\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />\n    <link href=\"https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap\" rel=\"stylesheet\" />\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script type=\"module\" src=\"/src/main.jsx?t=1786218259788\"></script>\n  </body>\n</html>\n",
+          "hasDisallow": false,
+          "hasSitemap": false
+        },
+        "sitemap": {
+          "exists": true,
+          "status": 200
+        },
+        "issues": [
+          {
+            "severity": "warn",
+            "field": "title",
+            "message": "Title too long (64 chars, max 60)"
+          },
+          {
+            "severity": "warn",
+            "field": "meta-description",
+            "message": "Description too long (180 chars)"
+          },
+          {
+            "severity": "warn",
+            "field": "canonical",
+            "message": "Missing canonical URL"
+          },
+          {
+            "severity": "info",
+            "field": "og:title",
+            "message": "Missing og:title"
+          },
+          {
+            "severity": "info",
+            "field": "og:description",
+            "message": "Missing og:description"
+          },
+          {
+            "severity": "info",
+            "field": "og:image",
+            "message": "Missing og:image"
+          },
+          {
+            "severity": "info",
+            "field": "twitter:card",
+            "message": "Missing twitter:card meta tag"
+          },
+          {
+            "severity": "warn",
+            "field": "headings",
+            "message": "No <h1> found on page"
+          },
+          {
+            "severity": "info",
+            "field": "structured-data",
+            "message": "No JSON-LD structured data found"
+          },
+          {
+            "severity": "warn",
+            "field": "title",
+            "message": "Duplicate title — also used on http://localhost:5173/"
+          }
+        ]
+      }
+    ]
+  },
+  "codeQuality": {
+    "htmlIssues": [],
+    "unusedCssHints": [],
+    "bundleAnalysis": {
+      "totalSize": "1271.7 KB",
+      "totalBytes": 1302200,
+      "jsChunkCount": 6,
+      "cssFileCount": 1,
+      "chunks": [
+        {
+          "name": "firebase-vendor-2yOfz8r0.js",
+          "sizeBytes": 545994,
+          "sizeKb": 533.2,
+          "type": "js",
+          "severity": "critical"
+        },
+        {
+          "name": "index-BoT92abS.js",
+          "sizeBytes": 353554,
+          "sizeKb": 345.3,
+          "type": "js",
+          "severity": "warn"
+        },
+        {
+          "name": "motion-vendor-5GtuWrFb.js",
+          "sizeBytes": 125324,
+          "sizeKb": 122.4,
+          "type": "js",
+          "severity": "ok"
+        },
+        {
+          "name": "gsap-vendor-Dc1meULs.js",
+          "sizeBytes": 121143,
+          "sizeKb": 118.3,
+          "type": "js",
+          "severity": "ok"
+        },
+        {
+          "name": "ogl-vendor-nO8_UU3h.js",
+          "sizeBytes": 92395,
+          "sizeKb": 90.2,
+          "type": "js",
+          "severity": "ok"
+        },
+        {
+          "name": "index-CFz7i12s.css",
+          "sizeBytes": 62889,
+          "sizeKb": 61.4,
+          "type": "css",
+          "severity": "ok"
+        },
+        {
+          "name": "rolldown-runtime-B0Z9INg1.js",
+          "sizeBytes": 901,
+          "sizeKb": 0.9,
+          "type": "js",
+          "severity": "ok"
+        }
+      ],
+      "heavyChunks": [
+        {
+          "name": "firebase-vendor-2yOfz8r0.js",
+          "sizeBytes": 545994,
+          "sizeKb": 533.2,
+          "type": "js",
+          "severity": "critical"
+        },
+        {
+          "name": "index-BoT92abS.js",
+          "sizeBytes": 353554,
+          "sizeKb": 345.3,
+          "type": "js",
+          "severity": "warn"
+        }
+      ]
+    },
+    "deprecatedTags": [],
+    "dependencyAnalysis": {
+      "total": 18,
+      "flagged": [
+        {
+          "package": "@react-google-maps/api",
+          "version": "^2.20.8",
+          "sizeKb": 150,
+          "note": "Google Maps — only import used hooks"
+        },
+        {
+          "package": "@vis.gl/react-google-maps",
+          "version": "^1.9.0",
+          "sizeKb": 80,
+          "note": "Vis.gl maps — check if both are needed"
+        },
+        {
+          "package": "firebase",
+          "version": "^12.17.0",
+          "sizeKb": 400,
+          "note": "Large SDK — use modular imports only"
+        },
+        {
+          "package": "gsap",
+          "version": "^3.15.0",
+          "sizeKb": 270,
+          "note": "Large animation lib — already chunked"
+        },
+        {
+          "package": "motion",
+          "version": "^12.43.0",
+          "sizeKb": 130,
+          "note": "Framer Motion — consider tree-shaking"
+        },
+        {
+          "package": "ogl",
+          "version": "^1.0.11",
+          "sizeKb": 200,
+          "note": "WebGL lib — ensure tree-shaking works"
+        }
+      ]
+    },
+    "sourceIssues": {
+      "totalFiles": 52,
+      "issues": [
+        {
+          "file": "backend\\services\\seederService.js",
+          "issues": [
+            {
+              "line": 2,
+              "type": "console.log",
+              "snippet": "console.log(\"Seeding in progress...\");"
+            }
+          ]
+        },
+        {
+          "file": "context\\AuthContext.jsx",
+          "issues": [
+            {
+              "line": 24,
+              "type": "console.log",
+              "snippet": "if (p) console.warn('[AuthContext] Firebase auth check timed out, forcing unlock"
+            },
+            {
+              "line": 49,
+              "type": "console.log",
+              "snippet": "console.warn('[AuthContext] Firebase error:', err.message)"
+            }
+          ]
+        },
+        {
+          "file": "data\\packages.js",
+          "issues": [
+            {
+              "type": "large-file",
+              "snippet": "2053 lines — consider splitting"
+            }
+          ]
+        },
+        {
+          "file": "pages\\Checkout.jsx",
+          "issues": [
+            {
+              "line": 92,
+              "type": "console.log",
+              "snippet": "console.log('Payment successful:', response)"
+            },
+            {
+              "type": "large-file",
+              "snippet": "497 lines — consider splitting"
+            }
+          ]
+        },
+        {
+          "file": "pages\\DiscoverPage.jsx",
+          "issues": [
+            {
+              "type": "large-file",
+              "snippet": "828 lines — consider splitting"
+            }
+          ]
+        },
+        {
+          "file": "pages\\PackageDetailsPage.jsx",
+          "issues": [
+            {
+              "type": "large-file",
+              "snippet": "476 lines — consider splitting"
+            }
+          ]
+        }
+      ],
+      "largest": [
+        {
+          "file": "data\\packages.js",
+          "loc": 2053,
+          "sizeKb": 49.6,
+          "issueCount": 1
+        },
+        {
+          "file": "pages\\DiscoverPage.jsx",
+          "loc": 828,
+          "sizeKb": 30.5,
+          "issueCount": 1
+        },
+        {
+          "file": "pages\\Checkout.jsx",
+          "loc": 497,
+          "sizeKb": 24.1,
+          "issueCount": 2
+        },
+        {
+          "file": "pages\\PackageDetailsPage.jsx",
+          "loc": 476,
+          "sizeKb": 19.3,
+          "issueCount": 1
+        },
+        {
+          "file": "components\\layout\\Header.jsx",
+          "loc": 357,
+          "sizeKb": 16.9,
+          "issueCount": 0
+        },
+        {
+          "file": "components\\ItineraryMap.jsx",
+          "loc": 355,
+          "sizeKb": 13.7,
+          "issueCount": 0
+        },
+        {
+          "file": "index.css",
+          "loc": 331,
+          "sizeKb": 9.5,
+          "issueCount": 0
+        },
+        {
+          "file": "pages\\AuthPage.jsx",
+          "loc": 315,
+          "sizeKb": 16.8,
+          "issueCount": 0
+        },
+        {
+          "file": "components\\ui\\Particles.jsx",
+          "loc": 243,
+          "sizeKb": 6.6,
+          "issueCount": 0
+        },
+        {
+          "file": "components\\ui\\DecryptedText.jsx",
+          "loc": 236,
+          "sizeKb": 9.4,
+          "issueCount": 0
+        }
+      ]
+    },
+    "cssAnalysis": {
+      "cssFiles": 1,
+      "hints": []
+    }
+  }
+}

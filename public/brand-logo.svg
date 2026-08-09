@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#7AEA00"/>
+
+  <!--
+    GT geometric mark — angular house/hexagon shape.
+    The form has:
+      - A diagonal top-left bar (like a roof peak)
+      - A rectangular G-like notch on the right
+      - Built from thick black parallelogram/polygon shapes
+  -->
+
+  <!-- Main body — left heavy bar (the "G" stem going down-left) -->
+  <polygon points="48,70 78,45 108,100 78,125" fill="#0A0A0A"/>
+
+  <!-- Top bar — the horizontal "T" crossbar / roof line -->
+  <polygon points="60,45 148,45 138,65 50,65" fill="#0A0A0A"/>
+
+  <!-- Right vertical block — the "T" stem / "G" body -->
+  <polygon points="118,58 148,45 148,128 118,128" fill="#0A0A0A"/>
+
+  <!-- Inner cutout — white notch to form the "G" counter -->
+  <polygon points="84,95 118,95 118,115 84,115" fill="#7AEA00"/>
+
+  <!-- Bottom connector — grounds the mark -->
+  <polygon points="78,125 148,125 140,148 86,148" fill="#0A0A0A"/>
+</svg>
